@@ -71,6 +71,7 @@ body {
 			color: $violet;
 			border-radius: 25px;
 			box-shadow: black 5px 7px 15px;
+			transition: all .3;
 
 			&:hover {
 				background-color: $soft-magenta;
