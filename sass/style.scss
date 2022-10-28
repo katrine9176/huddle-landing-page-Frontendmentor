@@ -1,0 +1,167 @@
+@use 'colors' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.8rem;
+	min-height: 100vh;
+	background-color: $violet;
+	background-image: url('../images/bg-desktop.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.nav {
+	.logo {
+        margin-top: 1em;
+		transform: scale(0.6);
+	}
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main {
+	.app-view {
+		margin-top: 2em;
+		height: 200px;
+	}
+
+	.text {
+		margin: 1.5em;
+		margin-left: 2.5em;
+		text-align: center;
+		color: $white;
+
+		.heading {
+			margin-top: 1em;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.paragraph {
+			margin-top: 1em;
+		}
+
+		.btn {
+			margin-top: 2em;
+			height: 50px;
+			width: 250px;
+			font-family: 'Open Sans', sans-serif;
+			border: none;
+			background: none;
+			background-color: $white;
+			font-size: 1.5rem;
+			color: $violet;
+			border-radius: 25px;
+			box-shadow: black 5px 7px 15px;
+
+			&:hover {
+				background-color: $soft-magenta;
+				cursor: pointer;
+			}
+		}
+
+		.icons {
+			margin-top: 2em;
+			display: flex;
+			justify-content: center;
+
+			i {
+				margin: 1em;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $soft-magenta;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	.attribution {
+		font-size: 1.4rem;
+		text-align: center;
+        color: $white;
+
+		a {
+			color: hsl(228, 73%, 19%);
+            text-decoration: none;
+		}
+	}
+}
+
+@media (min-width: 360px) {
+	.main {
+		.app-view {
+			height: 250px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	footer {
+		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.main {
+		.app-view {
+			height: 350px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		flex-direction: row;
+	}
+
+	.nav {
+		.logo {
+			margin: 2em;
+			transform: scale(1);
+		}
+	}
+
+	.main {
+		margin: 2em;
+
+		.app-view {
+			height: auto;
+		}
+
+		.text {
+			text-align: left;
+
+			.icons {
+				justify-content: end;
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	body {
+		background-image: url('../images/bg-mobile.svg');
+		background-size: contain;
+	}
+}
